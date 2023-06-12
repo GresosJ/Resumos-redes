@@ -18,6 +18,7 @@ Destination Address Range  | Link interface
 otherwise | 3
 
 **DA** : 110010000001011100011000**111010100001** *WHICH INTERFACE?*
+
 **DA** : 110010000001011100011000**100010101010** *WHICH INTERFACE?*
 
 O primeiro exemplo corresponde á interface 2 e o segundo exemplo corresponde á interface 1, apesar de também dar match na interface 2.
