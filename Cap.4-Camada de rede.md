@@ -1,24 +1,39 @@
 # Capitulo 4 - Camada de Rede
 
-Modelos de serviço:
+ 1. Introduction
+ 2. Virtual Circuit and Datagram Networks
+ 3. IP: Internet Protocol
+ 4. Routing Algorithms
 
-__Connectionless__ - Tipicamente uma rede de datagramas que são encaminhadas de forma independentes na rede e sem necessidade de estabelecer um circuito;
+## Network Layer
 
-__Connection__ - Circuito Virtual. Nível de rede organizado a circuitos virtuais implica que a máquina de origem não possa enviar dados sem estabelecer o circuito. Utiliza o endereço de destino para estabelecer o circuito e depois são criados identificadores de circuito.
+- Transponha o segmento da origem para o host de destino;
+- O lado que envia encapsula os segmentos nos datagramas;
+- O destino entrega segmentos para a camada de transporte;
+- Protocolos da camada de rede em cada host, router;
+- Router examina cabeçalhos fiéis em todos os datagramas IP que passam por ele;
 
-## Tabelas de encaminhamento
+#### Duas funções chaves do network-layer
 
-IP pega na rota que fizer match mais longo. Exemplo:
+- __Forwarding__ - Move pacotes do input do router para o output do router;
+- __Routing__ - Determina a rota que os pacotes iram fazer deste da origem ate o destino;
 
-Destination Address Range  | Link interface
--------------------------- | --------------
-110010000001011100010....... | 0
-110010000001011100011000.... | 2
-110010000001011100011....... | 3
-otherwise | 3
+## Virtual Circuit
 
-**DA** : 110010000001011100011000**111010100001** *WHICH INTERFACE?*
+A rede fornece serviço de conexão de camada de rede
 
-**DA** : 110010000001011100011000**100010101010** *WHICH INTERFACE?*
+"O caminho origem-destino se comporta muito semlhantemente com um circuito telefônico"
 
-O primeiro exemplo corresponde á interface 2 e o segundo exemplo corresponde á interface 1, apesar de também dar match na interface 2.
+- Desempenha sabiamente
+- Ações de rede ao longo do caminho da origem ao destino
+
+#### VC implementation
+
+Consiste em:
+
+ 1. Caminho origem para o destino;
+ 2. Números VC, um número para cada link no caminho;
+ 3. Entradas em tabelas de encaminhamento em roteadores ao longo do caminho;
+
+O pacote pertence ao VC que carrega o número do VC (não o endereço de destino). O número do VC pode ser alterado em cada link.
+
