@@ -20,6 +20,7 @@ A Internet é constituida por:
 __Internet__ -> Rede de redes (Network of Nerworks) -> Conjunto de protocolos de comunicação/aplicação. TCP e IP são osprincipais protocolos. TCP assegura a entrega fíavel fim a fim (do utilizador A, origem, ao utilizador B ,final). Redes IP são responsaveis por fazer o encaminhamento dos dados que geramos por o conjunto de redes interligadas.
 
 __Protocolos__ -> Basicamente é um conjunto de regras que regulamentam a comunicação. Essencialmente definem formatos, ordem de mensagens que são recebidas e enviadas entre as entidades e quais são as ações que devem ser tomadas quando as mensagens são enviadas ou recebidas.
+    
     EXEMPLO DE UM PROTOCOLO:
         Computador -> TCP connection request  -> Router
         Computador <- TCP connection response <- Router
