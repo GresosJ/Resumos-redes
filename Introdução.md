@@ -44,6 +44,6 @@ $$
 __Meios fisicos__ : 
 
 - Guiados -> cabos de cobre, coaxial, fibra otica. Fibras são imunes a ruido eletromagnetico (taxa de erro muito inferior), nem causa tanta atenuação como o coaxial por exemplo.
--Não guiados -> atmosfera, sinais radio, etc. O facto do sinal se propagar num meio aberto causa vários problemas.
+- Não guiados -> atmosfera, sinais radio, etc. O facto do sinal se propagar num meio aberto causa vários problemas.
 
 ## Network Core
