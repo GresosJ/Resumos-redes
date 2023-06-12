@@ -65,6 +65,6 @@ O primeiro exemplo corresponde á interface 2 e o segundo exemplo corresponde á
 
 |  Internet Datagram| ATM (VC) |
 |:---:|:---:|
-|  Data exchange among computers | Evolved from telephony  |
-|  Many link types | Human conversation, strict timing, reliability requiremnts |
-|  "smart" end systems (computers) | "dubm" end systems  |
+|  Troca de dados entre computadores | Evoluiu da telefonia  |
+|  Muitos tipos de link | Conversação humana, temporização estrita, requisitos de confiabilidade |
+|  End systems "inteligentes" (computadores) | End systems "burros" |
