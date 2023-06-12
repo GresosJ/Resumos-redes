@@ -29,9 +29,9 @@ __Protocolos__ -> Basicamente é um conjunto de regras que regulamentam a comuni
 
 ## Network edge
 
-. Periferia da rede : Host (clientes e servidores);
-. Redes de acesso : Rede por cabo, wireless;
-. Core de redes : Equipamento de interligação que assegura que o tráfego;
+- Periferia da rede : Host (clientes e servidores);
+- Redes de acesso : Rede por cabo, wireless;
+- Core de redes : Equipamento de interligação que assegura que o tráfego;
 
 __Multiplexagem no dominio da frequencia__ : diferentes canais a transmitirem frequências diferentes (num canal video, noutro audio, etc.). Os host essencialmente enviam dados. Se tiver uma mensagem de x kBytes, geralmente não é enviado de uma vez para rede. é dividido em pacotes mais pequenos (packets de L bits) que vão ser enviados num link de transmissão R (se houver um erro num desse packet, não é preciso reenviar os x kBytes).
 
