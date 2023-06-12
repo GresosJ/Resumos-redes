@@ -5,8 +5,6 @@
  3. __Network Core__
  4. __Delay, Loss, Throughput in Networks__
  5. __Protocol Layers, service models__
- 6. __Network under attack: Security__
- 7. __History__
 
 ## O que é a internet?
 
@@ -76,3 +74,12 @@ Antes de enviar dados, estabelecer um circuito. (Alocar recursos á cabeça). Se
 Packet Switching permite ter mais utilizadores na rede. Circuit Switching permite um melhor desempenho porque há alocação de recursos. Com milhares de redes de acesso, como é que se iria conectá-las entre so? Utilizam-se milhares de service providers (ISP's), que compettem entre si. Para os interconectar existem IXP (Internet Exhange Point) e redes regionais. Este encaminhamento é dinâmico.
 
 ## Protocol Layers
+
+Cada camada permite a cooperação entre entidades do mesmo nível protocolar que comunicam entre si, o que cria um contexto comum. *Comunicação por niveis ou camadas*:
+
+ 1. Conjunto de regras que reagem a comunicação entre intervenientes;
+ 2. Uma entidade é uma abstração de um ou mais processis computacionais;
+ 3. As regras são implementadas pelas entidades de uma camada protocolar;
+ 4. As funções protocolares são variadas e têm âmbitos ou contextos distintos;
+
+*Exemplos de funções protocolares* : (Geração de sinais, definição de interfaces, sincronização, endereçamento, detenção/correção de erros, etc.). O modelo protocolar TCP/IP tem 4 camadas funcionais: aplicaçãp, transportem rede, ligação, (fisico). Para passar info da camada da aplicação para o transporte, há um encapsulamento dos dados da aplicação dentro de uma estrutura que tem um header próprio.
