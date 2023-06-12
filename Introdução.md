@@ -47,3 +47,32 @@ __Meios fisicos__ :
 - Não guiados -> atmosfera, sinais radio, etc. O facto do sinal se propagar num meio aberto causa vários problemas.
 
 ## Network Core
+
+O core da rede é uma malha de equipamentos de comutação (routers ou switches) conetados entre si. Recebem os pacotes fragmentados no host do utilizaador e encaminham-nos entre si para que o sinal chegue a um servidor destini final. Cada pacote gerado é transmitido sempre a capacidade maxima do link.
+
+### Packet Switching
+
+Demora L/R segundos a transmitir um packet de L bits a R bps. Funciona segundo o principio Store and Forward. Só após receber todo o pacote é que o encaminha para a interface de saída. 
+
+Atraso fim a fim: se assumir que o atrasi de propagação é 0, na melhor das hipóteses tem-se que o tempo de ida e volta é 2 L/R.
+
+### Queueing delay/loss
+
+Varias entradas, uma saída: se débito de entrada for maior que o débito de saida, os packets vão entrar numa fila de espera e vão ficar á espera até seren transmitidos.Se a fila está cheia, ocorre packet drop.
+
+### Routing
+
+Determina como é que um pacote é forwarding na rede. "Saber encaminhar".
+
+### Forwarding
+
+Para ocorrer forwarding, é preciso que o routing aconteça. Só depois de todos os routers saberem como encaminhar trafego é o pacote tem possibilidade de chegar ao destino.
+
+### Circuit Switching
+
+Antes de enviar dados, estabelecer um circuito. (Alocar recursos á cabeça). Se quer um circuito de A para B de 1gbps, tem que se alocar capacidades de 1gb para os dois equipamentos.
+
+
+Packet Switching permite ter mais utilizadores na rede. Circuit Switching permite um melhor desempenho porque há alocação de recursos. Com milhares de redes de acesso, como é que se iria conectá-las entre so? Utilizam-se milhares de service providers (ISP's), que compettem entre si. Para os interconectar existem IXP (Internet Exhange Point) e redes regionais. Este encaminhamento é dinâmico.
+
+## Protocol Layers
