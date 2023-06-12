@@ -19,7 +19,8 @@ __Internet__ -> Rede de redes (Network of Nerworks) -> Conjunto de protocolos de
 
 __Protocolos__ -> Basicamente é um conjunto de regras que regulamentam a comunicação. Essencialmente definem formatos, ordem de mensagens que são recebidas e enviadas entre as entidades e quais são as ações que devem ser tomadas quando as mensagens são enviadas ou recebidas.
     
-    EXEMPLO DE UM PROTOCOLO:
+EXEMPLO DE UM PROTOCOLO:
+
         Computador -> TCP connection request  -> Router
         Computador <- TCP connection response <- Router
         Computador -> Get http//www.cesium... -> Router
