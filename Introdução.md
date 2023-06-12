@@ -28,3 +28,22 @@ __Protocolos__ -> Basicamente é um conjunto de regras que regulamentam a comuni
         Computador <- <FILE>                  <- Router
 
 ## Network edge
+
+.Periferia da rede : Host (clientes e servidores);
+.Redes de acesso : Rede por cabo, wireless;
+.Core de redes : Equipamento de interligação que assegura que o tráfego;
+
+__Multiplexagem no dominio da frequencia__ : diferentes canais a transmitirem frequências diferentes (num canal video, noutro audio, etc.). Os host essencialmente enviam dados. Se tiver uma mensagem de x kBytes, geralmente não é enviado de uma vez para rede. é dividido em pacotes mais pequenos (packets de L bits) que vão ser enviados num link de transmissão R (se houver um erro num desse packet, não é preciso reenviar os x kBytes).
+
+$$
+\begin{align}
+    \frac{L (bits)}{R (bits/sec)} = PTD 
+\end{align}
+$$
+
+__Meios fisicos__ : 
+
+- Guiados -> cabos de cobre, coaxial, fibra otica. Fibras são imunes a ruido eletromagnetico (taxa de erro muito inferior), nem causa tanta atenuação como o coaxial por exemplo.
+-Não guiados -> atmosfera, sinais radio, etc. O facto do sinal se propagar num meio aberto causa vários problemas.
+
+## Network Core
