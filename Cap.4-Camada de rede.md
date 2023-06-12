@@ -66,5 +66,5 @@ O primeiro exemplo corresponde á interface 2 e o segundo exemplo corresponde á
 |  Internet Datagram| ATM (VC) |
 |:---:|:---:|
 |  Troca de dados entre computadores | Evoluiu da telefonia  |
-|  Muitos tipos de link | Conversação humana, temporização estrita, requisitos de confiabilidade |
+|  Muitos tipos de link | Conversação humana, tempo restrito, requisitos de confiabilidade |
 |  End systems "inteligentes" (computadores) | End systems "burros" |
