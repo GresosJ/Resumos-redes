@@ -114,3 +114,7 @@ __Stopping Criteria__ : O segmento UDP eventualmente chega ao host destinado. O 
 ### IP datagram format
 
 ![IP datagram format](img/IP.png)
+
+Datagramas IP maiores do que 1500 bytes, vão ser fragmentados. Uma vez fragmentados, só vão ser reagrupados no destino.
+
+![Fragmentation](img/frag.png)
