@@ -165,3 +165,13 @@ Consideremos o IP 130.1.5.1:
 Consideremos o IP 130.1.5.1/24:
 - É o endereço da estação 1 da sub-rede 130.1.5.0;
 - O subnetting é definido no espaço host ID (__\<network id>\<subnet id>\<host id>__)
+
+## Subnetting
+
+Numa sub-rede os hosts chegam fisicamente entre si sem a intervenção do router. PAra determinar as subredes, separa-se a ligação ao router, criando redes isoladas. Para ter comuicação entre sub-redes é obrigatório ter um router, com interface para a sua própria rede.
+
+| Vantagens | Desvantagens |
+| :---: | :---: |
+| Permite uma melhor organização e gestão da rede | Reduz espaço de enderaçamento (vários endereços passam a não ser utilizáveis) |
+| Permite introduzir mais niveis hierárquicos para routing | Gestão mais complexa |
+
