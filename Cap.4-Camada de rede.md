@@ -164,4 +164,4 @@ Consideremos o IP 130.1.5.1:
 
 Consideremos o IP 130.1.5.1/24:
 - É o endereço da estação 1 da sub-rede 130.1.5.0;
--O subnetting é definido no espaço host ID __(<network id><subnet id><host id>)__
+- O subnetting é definido no espaço host ID __(<network id><subnet id><host id>)__
