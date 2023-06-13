@@ -118,3 +118,22 @@ __Stopping Criteria__ : O segmento UDP eventualmente chega ao host destinado. O 
 Datagramas IP maiores do que 1500 bytes, vão ser fragmentados. Uma vez fragmentados, só vão ser reagrupados no destino.
 
 ![Fragmentation](img/frag.png)
+
+## IP Addressing
+
+*Router* -> equipamento interligação nivel 3;
+*Switch* -> equipamento interligação nivel 2;
+
+Este router possui 3 redes e 3 endereços IP cada um associado a sua interface:
+- 223.1.1;
+- 223.1.2;
+- 223.1.3.
+
+Os endereços estão associados as interfaces. \
+exemplo: 223.1.1.1 = 11011111 00000001 00000001 00000001
+
+Dos 32 bits, há uma parte que identifica a rede (ou sub-rede) e identifica a interface do host.
+
+### IPV4
+
+
