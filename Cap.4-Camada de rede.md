@@ -175,3 +175,9 @@ Numa sub-rede os hosts chegam fisicamente entre si sem a intervenção do router
 | Permite uma melhor organização e gestão da rede | Reduz espaço de enderaçamento (vários endereços passam a não ser utilizáveis) |
 | Permite introduzir mais niveis hierárquicos para routing | Gestão mais complexa |
 
+## Supernetting
+
+Trta das redes diretamente ligadas, tráfego interno, e rota por defeito. A rota por defeito tme de garantir acesso à rede onde o router está ligado. Neste caso é RTR. Nas redes internas só processos de saber que são acessiveis via RTR2.
+
+## IP Routing
+
