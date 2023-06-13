@@ -148,3 +148,20 @@ Valor binario sem sinal de 32 bits __(xxxxxxxx.xxxxxxxx.xxxxxxxx.xxxxxxxx)__ . U
 
 ## CIDR - Classless InterDomain Routing
 
+Padrão que com o endereço Ip retorna parte da sub-rede do endereço IP.
+
+| Class | Binary | Decimal | CIDR |
+| :---: | :---: | :---: | :---: |
+| A | 11111111.00000000.00000000.00000000 | 255.0.0.0 | /8 |
+| B | 11111111.11111111.00000000.00000000 | 255.255.0.0 | /16 |
+| C | 11111111.11111111.11111111.00000000 | 255.255.0.0 | /24 |
+
+Quando nao usamos classes, a mascara pode tomar qualquer valor, isto permite a criação de de sub-redes ou super-redes.
+
+__Exemplo:__\
+Consideremos o IP 130.1.5.1:
+- Se for classe B a mascara for default é /16. Então o endereço da estação 5.1 da rede 130.1.0.0
+
+Consideremos o IP 130.1.5.1/24:
+- É o endereço da estação 1 da sub-rede 130.1.5.0;
+-O subnetting é definido no espaço host ID __(<network id><subnet id><host id>)__
