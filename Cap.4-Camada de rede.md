@@ -136,4 +136,15 @@ Dos 32 bits, há uma parte que identifica a rede (ou sub-rede) e identifica a in
 
 ### IPV4
 
+Valor binario sem sinal de 32 bits __(xxxxxxxx.xxxxxxxx.xxxxxxxx.xxxxxxxx)__ . Uma parte identifica a rede/sub-rede e a outra a interface do host nessa rede. Na internet cada endereço deve ser único. Esses endereços são distribuidos em 5 classes (A-E), essas classes são dadas pela IANA (Internet Assigned Number Authority).
+
+| Class | Identifier | Network Address | Destinatary Address |
+| :---: | :---: | :---: | :---: |
+| A | 0 (1 bit) | 7 bits | 24 bits |
+| B | 10 (2 bits) | 14 bits | 16 bits |
+| C | 110 (3 bits) | 14 bits | 16 bits |
+| D | 1110 (4 bits) |Multicast Address between 224.0.0.0 - 239.255.255.255  </td> | - |
+| E | 11110 | Reserved for the future | - |
+
+## CIDR - Classless InterDomain Routing
 
