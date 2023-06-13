@@ -177,7 +177,7 @@ Numa sub-rede os hosts chegam fisicamente entre si sem a intervenção do router
 
 ## Supernetting
 
-Trta das redes diretamente ligadas, tráfego interno, e rota por defeito. A rota por defeito tme de garantir acesso à rede onde o router está ligado. Neste caso é RTR. Nas redes internas só processos de saber que são acessiveis via RTR2.
+Trata-se das redes diretamente ligadas, tráfego interno, e rota por defeito. A rota por defeito tme de garantir acesso à rede onde o router está ligado. Neste caso é RTR. Nas redes internas só processos de saber que são acessiveis via RTR2.
 
 ## IP Routing
 
