@@ -68,3 +68,36 @@ O primeiro exemplo corresponde á interface 2 e o segundo exemplo corresponde á
 |  Troca de dados entre computadores | Evoluiu da telefonia  |
 |  Muitos tipos de link | Conversação humana, tempo restrito, requisitos de confiabilidade |
 |  End systems "inteligentes" (computadores) | End systems "burros" |
+
+## IP : Internet Protocol
+
+| Names | Functions |
+| :---: | :---: |
+| Transport Layer | TCP, UDP|
+| Network Layer| *routing protocols*, *IP Protocol* & *ICMP protocol*|
+| Link Layer | --- |
+| Physical Layer | --- |
+
+- __Routing Protocol__
+    - Seleciona caminho (RIP, OSPF, BGP) &harr; Tabela de encaminhamento;
+
+- __IP Protocol__
+    - Abordando convenções;
+    - Formato de Datagrama;
+    - Convenções de Manipulação de Pacotes;
+
+- __ICMP Protocol__
+    - Repor erros;
+    - "Sinaliza" o router;
+
+### ICPM: Internet Controll Message Protocol
+
+Este protocolo é utilizado por router e hosts para comunicar com as camadas da rede, informar erros e solicitar/resposder a echo (através de pings).
+
+Nas camadas da rede "acima" do IP: mensagem ICPM transportadas em datagramas IP.
+
+*ICMP message:* type, code, checksum, description.\
+ICMPv4 - RFC792; ICMPv6 - RFC4443
+
+### Traceroute e ICPM
+
