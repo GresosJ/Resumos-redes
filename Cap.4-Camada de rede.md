@@ -90,14 +90,27 @@ O primeiro exemplo corresponde á interface 2 e o segundo exemplo corresponde á
     - Repor erros;
     - "Sinaliza" o router;
 
-### ICPM: Internet Controll Message Protocol
+### ICMP: Internet Controll Message Protocol
 
 Este protocolo é utilizado por router e hosts para comunicar com as camadas da rede, informar erros e solicitar/resposder a echo (através de pings).
 
-Nas camadas da rede "acima" do IP: mensagem ICPM transportadas em datagramas IP.
+Nas camadas da rede "acima" do IP: mensagem ICMP transportadas em datagramas IP.
 
 *ICMP message:* type, code, checksum, description.\
 ICMPv4 - RFC792; ICMPv6 - RFC4443
 
-### Traceroute e ICPM
+### Traceroute e ICMP
 
+A origem envia uma serie de segmentos UDP para o destino.
+
+- Primeiramente seta o TTL para 1; etc.;
+- Número de portas improvaveis;
+
+Quando o n conjunto de datagramas chega ao router n, o router descarta os datagramas e envia para a origem uma mensagens ICMP (tipo 11, codigo 0). As mensagens ICMP incluem onome do router e o endereço IP. \
+Quando uma mensagem ICMP chega a origem grava o RTTs.
+
+__Stopping Criteria__ : O segmento UDP eventualmente chega ao host destinado. O destino retorna a mensagem ICMP "port unreachable" (tipo 3, codigo 3) e a origem para.
+
+### IP datagram format
+
+![IP datagram format](img/IP.png)
