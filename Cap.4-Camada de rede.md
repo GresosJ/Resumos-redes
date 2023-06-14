@@ -181,3 +181,46 @@ Trata-se das redes diretamente ligadas, tráfego interno, e rota por defeito. A 
 
 ## IP Routing
 
+O router e a estação ambos têm as tabelas de encaminhamento (routing).
+
+### Forwarding algorithm
+
+É facilitada pelo endereçamento hierárquico. O endereço IP é: __a.b.c.d/m = X.Y__ (rede.estação)
+
+- Usar máscara para extrair o endereço da rede __X__;
+- Procurar entrada que melhor se ajuste a __X__. Se __X__ é local, entregar na interface __X.Y__ (entrega direta), senão usar __X__ para encaminhar para o próximo salto (next hop);
+- A entrada por defeito (0.0.0.0/0 ou default) ajusta-se a todos os __X__;
+
+### Estatico vs Dinamico
+
+__Estatico:__ : Rota estatica é o administrador que as configura e são imuutaveis.\
+É um esque bastante rigido, pouco flexivel, mas simples e consegue reduzir o tráfego na rede.
+
+__Dinamico:__ : Rota dimanica, e atualizada ao longo do tempo. \
+Os routers trocam informação de routing entre si. Implementam protocolos especificos (RIP, OSPF, BGP, etc.). Tem uma grande flexibilidade e adapta-se de forma automática a falas ou mudanças ma configuração da rede. O tráfego da atualização pode causar sobrecarga na rede.
+
+### Caminho por defeito
+
+É a rota a seguir caso não exista uma entrada especifica na tabela para a rede de destino. Caso particular do encaminhamento estático.
+
+### Computação dinâmica das rotas
+
+__Centralizada__ : Cada router, conhecendo a topologia da area, de termina o melhor caminho para os possiveis destinos dessa rede.
+
+__Distribuida__ : Cada router, envia informação de encaminhamento que conhece aos routers seus vizinhos (redes a que dá acesso).
+
+## NAT - Network Address Translation
+
+__Motivação__ :  A rede local usa apenas um endereço IP no que diz respeito ao mundo externo.
+
+- Um endereeço IP público pode ser usado para todos os dispositvos (depois endereços privados);
+- Pode alterar endereços de dispositivos na rede local;
+- Pode mudar o ISP sem mudar os endereços dos dispositivos;
+
+__Implementação__ : 
+
+- __Datagramas de saída__: substiruit (endereço IP da origem, numeor da porta) de cada datagrama de saída (endereço IP NAT, novo numero da porta);
+- __Lembrar__ que (na tabela de tradução NAT) cada (endereço IP da origem, numero da porta) para (endereço IP NAT, novo numero da porta) par de tradução;
+- __Datagramas recebidos__: substituir (endereço IP NAT, novo numero da porta) de cada datagrama recebido (endereço IP da origem, numero da porta) armazenado na tabela NAT;
+
+Campo de número de porta de 16 bits, conexões simultâneas de 60k com um único endereço do lado da LAN, o NAT é controverso, o roteador deve processar apenas até a camada 3 e viola o argumento de ponta a ponta (precisa ser levado em consideração pelos designers de aplicativos). A falta de endereço deve ser ser resolvido por IPv6.
