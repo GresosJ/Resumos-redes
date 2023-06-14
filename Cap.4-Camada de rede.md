@@ -224,3 +224,21 @@ __Implementação__ :
 - __Datagramas recebidos__: substituir (endereço IP NAT, novo numero da porta) de cada datagrama recebido (endereço IP da origem, numero da porta) armazenado na tabela NAT;
 
 Campo de número de porta de 16 bits, conexões simultâneas de 60k com um único endereço do lado da LAN, o NAT é controverso, o roteador deve processar apenas até a camada 3 e viola o argumento de ponta a ponta (precisa ser levado em consideração pelos designers de aplicativos). A falta de endereço deve ser ser resolvido por IPv6.
+
+## IPv6
+
+__Motivação__ : O espaço de endereçamento do IPv4 é limitado e o IPv6 é a solução para o esgotamento de endereços. Extensão do endereço de 32 bits para 128 bits.
+
+__Formado do Datagrama__
+
+- Tamanho fixo de 40 bytes de header;
+- Sem fragmentação premitida, por defeito;
+    - __Traffic Class__ : Tem prioridade comparado aos outros datagramas;
+    - __Flow Label__ : Identifica o fluxo de datagramas;
+    - __Next Header__ : Identifica o protocolo da camada superior;
+
+### IPv6 vs IPv4
+
+- __Checksum__ : Removido inteiramente para reduzir o tempo de processamento em cada salto;
+- __Options__ : Permitidas, mas fora do header, indicadas pelo campo "Next Header";
+- __ICMPv6__ : Novo formato de mensagem ICMP;
