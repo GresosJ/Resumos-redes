@@ -25,3 +25,7 @@ __Controlo de fluxo__: Serviço generico que pode existir no nivel 2. Regula a c
 __Controlo de erros__: 2 tarefaas: deteção e correção de erros. Posso receber uma entrega não fíavel e simplesmente descartar, sem corrigir. Códigos de correção são muito pouco usados porque possuem overhead muito grande. Utilizam-se então códigos de retransmissão. Redes cabeladas têm muitos poucos erros e é possivel que nem tenham coidgo de detenção de erros. Redes WI-FI, como o meio é muito mais suscetível a erros, o código de detenção de erros está sempre presente. 
 
 __Half-duplex e Full-duplex__: Half-duplex são bidirecionais alternadas (ou transmite um ou transmite outra) e Full-duplex são simultâneas. 
+
+__Error detection__: Deteção de erros é feita através de um código de deteção de erros. O emissor adiciona bits de deteção de erros ao frame. O receptor recebe o frame e verifica se os bits de deteção de erros estão corretos. Se não estiverem, o frame é descartado.
+
+![Error detection](img/error-detection.png)
