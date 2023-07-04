@@ -29,3 +29,11 @@ __Half-duplex e Full-duplex__: Half-duplex são bidirecionais alternadas (ou tra
 __Error detection__: Deteção de erros é feita através de um código de deteção de erros. O emissor adiciona bits de deteção de erros ao frame. O receptor recebe o frame e verifica se os bits de deteção de erros estão corretos. Se não estiverem, o frame é descartado.
 
 ![Error detection](img/error-detection.png)
+
+## Error detection, correction
+
+EDC = Error Detection and Correction bits (redundant bits) = Datos protegidos por error checking, podem incluor header fields
+
+Tem noção que o error detection não é 100% fiável! Estes protocolos podem não detetar erros, mas é raro. Longos EDC são mais fiáveis que curtos.
+
+## Multiple Acess Protocols
