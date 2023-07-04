@@ -37,3 +37,30 @@ EDC = Error Detection and Correction bits (redundant bits) = Datos protegidos po
 Tem noção que o error detection não é 100% fiável! Estes protocolos podem não detetar erros, mas é raro. Longos EDC são mais fiáveis que curtos.
 
 ## Multiple Acess Protocols
+
+Existem dois tipos de links
+
+- Point-to-point :
+    - PPP para dial-up; HLDC point-to-point ou multiponto;
+    - Point-to-point link entre Ethernet switch e host;
+- Broadcast (shared wire or medium):
+    - Ethernet antigo;
+    - upstream HFC (Hybrid Fiber Coax);
+    - 802.11 wireless LAN;
+
+Único canal compartilhado de broadcast. Duas ou mais transmissões simultâneas por nós = interferência. Irá decorrer colisão se dois ou mais nós transmitirem ao mesmo tempo.
+
+__Multiple Acess Protocol__ : É um algoritmo que determina como os nós compartilham o canal. A comunicação sobre o compartilhamento de canal deve ser no próprio canal.
+
+_Um ideal Multiple Acess Protocol_
+
+Um protocolo de acesso múltiplo ideal
+
+Dado: canal de transmissão de taxa R bps
+
+ 1. Quando um nó deseja transmitir, ele pode enviar na taxa R
+ 2. Quando M nodos querem transmitir, cada um pode enviar na taxa média R/M
+ 3. Totalmente descentralizado:
+    - nenhum nó especial para coordenar as transmissões
+    - sem sincronização de relógios, slots
+ 4. simples
