@@ -97,6 +97,15 @@ __Slotted ALOHA__: O tempo é dividido em slots de tempo. Cada slot corresponde 
 
 __Pure ALOHA__: Não considera slots, logo não tem sincronização. A probabilidade de colisões aumenta uma vez que uma trama enviada em t0 pode colidir com uma trama enviada em t0 - 1 e t0 + 1. Eficiência de 18%.
 
-__CSMA__: Neste método escuta-se o meio antes de começar a transmitir. Para a analogia humana é "Se alguém fala, eu não vou interromper". Pode ocorrer colisões devido ao "delay". Um  nodo B pode começar a transmitir e um nodo D pode começar a transmitir uma vez que aindaa não ouviu o B. Há uma interferencia do sinal azul com o sinal preto que corrompe a trama. 
+__CSMA__: Neste método escuta-se o meio antes de começar a transmitir. Para a analogia humana é "Se alguém fala, eu não vou interromper". Pode ocorrer colisões devido ao "delay". Um  nodo B pode começar a transmitir e um nodo D pode começar a transmitir uma vez que aindaa não ouviu o B. Há uma interferencia do sinal vermelho com o sinal amarelo que corrompe a trama.
 
 ![CSMA](img/csma.png)
+
+__CSMA/CD (Colision Detection)__: Num meio partilhado *cabelado* é possivel detetar colisões porque a rede que está a transmitir faz sinal simultaneamente a análise ao meio e apercebe-se que o sinal que está a colococar no meio deixa de ser igual aquele que está a transmitir. E, portanto, em redes cabeladas, é facilmente detetada a colisão. Em redes wi-fi não é facil devido ao fading, redes escondidas, etc. Por isso é que se usa o CSMA/CA. Em meios cabelados, as estações quando uma colisão é detetada, as estações reforçam a colisão (geram um ruido para a linha) e abortam a colisão. Depois de abortar, fazem backoff.
+
+### Taking Turns
+
+__Polling__ : O nodo mestre "convida" a os nodos *escravos* a transmitir. Fazer polling ás estações e só depois é que a estação envia dados. Problemas: - Overhead de polling - Latência - Single point of failure (nodo mestre).
+
+__Token passing__: Um token circula na rede e só a estação que tem o token consegue transmitir. Problemas: - Overhead de token - Latência - Single point of failure (token).
+
