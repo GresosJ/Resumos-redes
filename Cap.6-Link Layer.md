@@ -88,3 +88,15 @@ A escolha entre *TDMA* e *FDMA* depende do contexto da aplicação e das condiç
 | --- | --- |
 |Existem requisitos estritos para latência e atraso | Onde simplicidade e flexibilidade são mais importantes|
 |O canal é suscetível a interferências | Há um grande número de usuários que precisam ser suportados|
+
+### Random Acess
+
+Quando uma estação acede ao meio, tem a capacidade de utilizar toda a capacidade existente para transmitir. Preocupam-se em tentar detetar ou tentar evitar as colisões.
+
+__Slotted ALOHA__: O tempo é dividido em slots de tempo. Cada slot corresponde ao tempo de transmissão de um pacote. Quando uma estação tem um pacote para transmitir, ela transmite no início do próximo slot. Se não houver colisões, a estação pode enviar o próximo pacote no próximo slot. Se houver colisões, a estação retransmite o pacote no próximo slot com probabilidade p, onde p é escolhido de forma a maximizar a eficiência do canal.
+
+__Pure ALOHA__: Não considera slots, logo não tem sincronização. A probabilidade de colisões aumenta uma vez que uma trama enviada em t0 pode colidir com uma trama enviada em t0 - 1 e t0 + 1. Eficiência de 18%.
+
+__CSMA__: Neste método escuta-se o meio antes de começar a transmitir. Para a analogia humana é "Se alguém fala, eu não vou interromper". Pode ocorrer colisões devido ao "delay". Um  nodo B pode começar a transmitir e um nodo D pode começar a transmitir uma vez que aindaa não ouviu o B. Há uma interferencia do sinal azul com o sinal preto que corrompe a trama. 
+
+![CSMA](img/csma.png)
