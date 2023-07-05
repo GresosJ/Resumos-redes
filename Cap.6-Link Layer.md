@@ -76,7 +76,15 @@ __Taxonomia__ - esquema de classificação dos protocolos. 3 classes génericas:
     - *Random acess* -  canal não é dividido e, não sendo dividido, há a possibilidade de ocorrem colisões. Vai haver uma forma de recuperar dessas colisões.
     - *Taking turns* - passagem de "tokens" de uns nodos para outros.
 
-###Channel Partition
+### Channel Partition
 
 __TDMA__: Método livre de contentação. A capacidade do canal é, numa primeira estância, dividida em "time frames", e cada time frame dividido em slots. O acesso vai sendo feito dentro de cada time frame. Cada estação obtém a um time slot fixo, que normalmente corresponde ao tempo de transmissão de pacote. Slots que não sejam usados por estações não são reusados por outras estações. Vão para um estado de "idle".
 
+__FDMA__:  O canal é dividido em múltiplas frequencias e cada estação é atribuida uma frequência.
+
+A escolha entre *TDMA* e *FDMA* depende do contexto da aplicação e das condições da rede.
+
+| TDMA | FDMA |
+| --- | --- |
+|Existem requisitos estritos para latência e atraso | Onde simplicidade e flexibilidade são mais importantes|
+|O canal é suscetível a interferências | Há um grande número de usuários que precisam ser suportados|
