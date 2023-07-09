@@ -109,3 +109,40 @@ __Polling__ : O nodo mestre "convida" a os nodos *escravos* a transmitir. Fazer 
 
 __Token passing__: Um token circula na rede e só a estação que tem o token consegue transmitir. Problemas: - Overhead de token - Latência - Single point of failure (token).
 
+## LAN
+
+### MAC Address e ARP
+
+Endereços unicos na rede local. Isto e, so podemos ter acesso a eles se for adajacentes a nossa rede local.
+
+__Endereço IP__ -> muda de acordo com a rede "hospedeira". \
+__Endereço MAC__ -> não muda. \
+__Protocolo ARP__ permite saber o endereço MAC atrav´es do seu IP.
+
+Se A quer enviar uma trama para B, mas o endereço MAC do B nao esta na tabela ARP do A, A tem de fazer um ARP request, que contem o endereço IP de B. O endereço MAC destino utilizado e o endereço de broadcast. Quando uma trama possui esse endereço, TODOS os sistemas nessa LAN vao processar essa trama. Vao desencapsular, processar o pacote IP, e ver se o seu IP ´e igual ao IP pedido. A maquina com o IP correspondente, vai responder a A com uma primitiva "ARP reply" com o seu endereço MAC. E nessa altura o A pode atualizar com a informaçao recebida.
+
+### Ethernet
+
+A tecnologia LAN com fio "dominante". Foi a primeira tecnologia LAN amplamnete utilizada, pois era simples e barata. Funciona com um unico chip e usa varias sementes. Tambem acompanhou a corrida da velocidade (10Mbps - 40 Gbps).
+
+__Bus__: todos os nos no mesmo dominio de colisao. Podem colidir uns com os outros. Popular ate os anos 90.
+
+__Star__: todos os nos ligados a um switch. Nao ha colisoes. Usado atualmente.
+
+#### Unreliable, Connectionless
+
+__Connectionless__: Nao orientadas a conexao. Basta que sinta um meio em silencio para enviar as tramas, nao ha qualquer negociacao entre MAC de origem e um MAC de destino.
+
+__Unreliable__: Nao ha confirmacoes entre N/C's dizendo se a trama chegaou bem ou nao. Se algo corre mal, as N/C's descartam a trama e depois tentam recuperar de colisao.
+
+## Switches
+
+Equipamento de nivel 2. O switch e capaz de paralelismo, STORE AND FORWARDING das frames. Em situaçoes de contençao, duas tramas a chegar ao switch por portas diferentes destinadas a mesma porta, primeiro comuta uma e depois comuta a outra. Examina o MAC Address da trama que esta a chegar e seletivamente encaminha essa trama por uma ou mais portas de saude. ´E transparente, isto ´e, os hosts nao sabem da presença de switches. Tem a capacidade de aprendizagem, nao precisa de muita configuraçao (apenas a basica necessaria). Permite isolar qualquer transmissoes simultaneas sem colisoes.
+
+### Switches interconectados
+
+Seus switches possíveis podem ser conectados juntos, você pode estar se perguntando como posso me conectar a um host após várias camadas de switches, mas exatamente como foi mencionado anteriormente devido à natureza de autoaprendizagem dos switches.
+
+### Switches vs Routers
+
+Em ambos os casos, eles são armazenados e encaminhados. Os roteadores funcionam com um dispositivo de camada de rede, enquanto os switches funcionam com dispositivos de camada de link. Outra coisa que eles têm em comum é que ambos possuem tabelas de encaminhamento. Enquanto os roteadores calculam as tabelas usando algoritmos de roteamento (endereços IP), os switches aprendem como preencher sua tabela de encaminhamento usando flooding, learning e endereços MAC.
