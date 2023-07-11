@@ -12,3 +12,13 @@ __BER__: (Bit Error Rate) - Bits errados face aos bits transmitidos. O objetivo 
 
 ![BER](img/BER.png)
 
+## IEEE 802.11 Wireless LANs (Wi-Fi)
+
+![802.11](img/80211.png)
+
+Todas usam CSMA/CA para acesso multiplo. ´E um metodo de controlo de acesso especifico de redes wi-fi; \
+*Base Station* = Acess Point (AP); \
+*Basic Service Set (BSS)* = Area de cobertura QUE ESTA A SER SERVIDA POR UM PARTICULAR AP; 
+
+Um host para poder operar tem de se associar ao AP. Faz *scanning* dos varios canais ou entao pode ir recebendo "beacon frames" (beacons) que sao enviadas pelos AP que informam sobre o nome de AP (SSID) e o MAC address. O host, apos a receçao de becons, seleciona um AO ´a qual se vai associar.
+
