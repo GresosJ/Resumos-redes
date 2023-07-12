@@ -27,3 +27,11 @@ __Scanning Passivo__: feito quando o host H1 toma conhecimento das caracteristic
 __Scanning Ativo__: o host H1 envia um probe request em broadcast e os AP's que est~ao nas imediaç~oes respondam- probe response.
 
 ![Scanning Ativo](img/ativo.png)
+
+### Acessos multiplos
+
+CSMA, escuta o meio antes de transmitir. Ha situaçoes em que a colisao nao ´e detetada de forma eficaz. Num meio wireless, nao conseguimos ter garantia de qualidade do sinal que a estaçao recetora est´a a ter uma vez que se podem receber sinais muito fracos. Portanto, os que o 802.11 decidiu foi que nao uam fazer detençao de colisao mas sim evitar colisoes (CSMA/CA).
+
+__802.11 sender__: ha um tempo inicial que o sender tem que de esperar antes de começar a transmitir (DIFS: 28-50 micro segundos). Depois desta espera, transmite a trama integralmente sem fazer deteçao de colisao. Se o meio esta ocupado, a estaçao nao fica de forma persistente a tentar enviar o sinal. Começa o "random backoff time" e otimer conta enquanto o canal esta inativo. Se nao recebeu o ACK, aumenta o "backoff time" e volta a entrar no ciclo de espera. Se recebeu o ACK, o ciclo termina.
+
+__802.11 receiver__: espera SIFS (10-16 micro segundos) e se a trama ´e recebida, envia um positivo ackledgement. Se este ACK  nao chega, ´e porque houve erro.
