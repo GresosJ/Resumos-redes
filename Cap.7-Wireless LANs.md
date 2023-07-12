@@ -35,3 +35,5 @@ CSMA, escuta o meio antes de transmitir. Ha situaçoes em que a colisao nao ´e 
 __802.11 sender__: ha um tempo inicial que o sender tem que de esperar antes de começar a transmitir (DIFS: 28-50 micro segundos). Depois desta espera, transmite a trama integralmente sem fazer deteçao de colisao. Se o meio esta ocupado, a estaçao nao fica de forma persistente a tentar enviar o sinal. Começa o "random backoff time" e otimer conta enquanto o canal esta inativo. Se nao recebeu o ACK, aumenta o "backoff time" e volta a entrar no ciclo de espera. Se recebeu o ACK, o ciclo termina.
 
 __802.11 receiver__: espera SIFS (10-16 micro segundos) e se a trama ´e recebida, envia um positivo ackledgement. Se este ACK  nao chega, ´e porque houve erro.
+
+![802.11 MAC Protocol: CSMA/CA](img/sender/receiver.png)
