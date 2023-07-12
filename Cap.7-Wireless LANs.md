@@ -36,4 +36,4 @@ __802.11 sender__: ha um tempo inicial que o sender tem que de esperar antes de 
 
 __802.11 receiver__: espera SIFS (10-16 micro segundos) e se a trama ´e recebida, envia um positivo ackledgement. Se este ACK  nao chega, ´e porque houve erro.
 
-![802.11 MAC Protocol: CSMA/CA](img/sender/receiver.png)
+![802.11 MAC Protocol: CSMA/CA](img/senderreceiver.png)
