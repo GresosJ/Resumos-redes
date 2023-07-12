@@ -14,11 +14,16 @@ __BER__: (Bit Error Rate) - Bits errados face aos bits transmitidos. O objetivo 
 
 ## IEEE 802.11 Wireless LANs (Wi-Fi)
 
-![802.11](img/80211.png)
-
 Todas usam CSMA/CA para acesso multiplo. ´E um metodo de controlo de acesso especifico de redes wi-fi; \
 *Base Station* = Acess Point (AP); \
 *Basic Service Set (BSS)* = Area de cobertura QUE ESTA A SER SERVIDA POR UM PARTICULAR AP; 
 
-Um host para poder operar tem de se associar ao AP. Faz *scanning* dos varios canais ou entao pode ir recebendo "beacon frames" (beacons) que sao enviadas pelos AP que informam sobre o nome de AP (SSID) e o MAC address. O host, apos a receçao de becons, seleciona um AO ´a qual se vai associar.
+Um host para poder operar tem de se associar ao AP. Faz *scanning* dos varios canais ou entao pode ir recebendo "beacon frames" (beacons) que sao enviadas pelos AP que informam sobre o nome de AP (SSID) e o MAC address. O host, apos a receçao de becons, seleciona um AP ´a qual se vai associar.
 
+__Scanning Passivo__: feito quando o host H1 toma conhecimento das caracteristicas da BSS atraves de beacons. Estes sao enviados do AP para as STA's. Com base nesses beacons, a estaç~ao H1 escolhe qual o AP a que se vai associar. 
+
+![Scanning Passivo](img/passive.png)
+
+__Scanning Ativo__: o host H1 envia um probe request em broadcast e os AP's que est~ao nas imediaç~oes respondam- probe response.
+
+![Scanning Ativo](img/ativo.png)
