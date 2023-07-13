@@ -40,3 +40,9 @@ __802.11 receiver__: espera SIFS (10-16 micro segundos) e se a trama ´e recebid
 
 Apesar de haver tempos de espera, pode de facto ocorrer colisoes (devido ao no escondido, por exemplo). Portanto, antes de enviar dataframes, usar trmas de mais curta duraçao que fazem um pedido de acesso ao meio. A STA (station), antes de começar a enivar uma trama longa, usa pequenas tramas que pedem o acesso ao meio (RTS - request to send). Nao remove totalmente as colisoes porque podemos ter colisoes a nivel dos RTS, mas uma vez que uma STA ganha acesso ao meio, nao existem mais colisoes. Depois da estaçao enviar o RTS, o AP faz um broadcast do CTS (clear to send). O CTS ´e enviado a todo os nos. \
 Este metodo (RTS/CTS) permite reservar o canal, e ´e bastante importante no sentido de remover na totalidade a colisao entre tramas porque uma vez que uma STA ganha acesso ao meio, durante esse periodo tem o meio reservado so para ela. *A probabilidade de haver colisoes entre RTS ´e muito baixa. Caso ocorra, acontece CSMA/CA. (backoff durante algum tempo e voltam a enviar o sinal)*
+
+![Addressing](img/addressing.png)
+
+| Address 1 | Address 2 | Address 3 | Address 4 |
+|:---:|:---:|:---:|:---:|
+|MAC address do wireless host ou AP que recebe este frame|MAC address do wireless host ou AP que envia este frame|MAC address da interface do router que o AP esta anexado|Usado so em ad hoc mode|
