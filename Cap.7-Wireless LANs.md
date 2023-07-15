@@ -49,3 +49,9 @@ Este metodo (RTS/CTS) permite reservar o canal, e ´e bastante importante no sen
 | Address 1 | Address 2 | Address 3 | Address 4 |
 |:---:|:---:|:---:|:---:|
 |MAC address do wireless host ou AP que recebe este frame|MAC address do wireless host ou AP que envia este frame|MAC address da interface do router que o AP esta anexado|Usado so em ad hoc mode|
+
+### Tipos de Frames
+
+__Management frames__: usado para executar funções de supervisão, como ingressar e sair de redes sem fio e mover associações de AP para AP. \
+__Control frames__: usado em conjunto com quadros de dados para executar operações de controlo, como aquisição de canal e funções de manutenção de detenção de portadora e confirmação positiva de dados recebidos. The Control Frames permitem entregar dados de forma confiavel de STA to STA. \
+__Data frames__: usado para enviar dados de STA to STA. Varios dta frames diferentes podem ocorrer, dependendo da rede.
