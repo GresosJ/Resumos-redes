@@ -1,5 +1,8 @@
 # Capitulo 7 - Wireless LANs
 
+ 1. __Caracteristicas das redes sem fios__
+ 2. __IEEE 802.11 Wireless LANs (Wi-Fi)__
+
 ## Caracteristicas das redes sem fios
 
 __Redes sem fios__: modo \
