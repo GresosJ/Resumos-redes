@@ -55,3 +55,7 @@ Este metodo (RTS/CTS) permite reservar o canal, e ´e bastante importante no sen
 __Management frames__: usado para executar funções de supervisão, como ingressar e sair de redes sem fio e mover associações de AP para AP. \
 __Control frames__: usado em conjunto com quadros de dados para executar operações de controlo, como aquisição de canal e funções de manutenção de detenção de portadora e confirmação positiva de dados recebidos. The Control Frames permitem entregar dados de forma confiavel de STA to STA. \
 __Data frames__: usado para enviar dados de STA to STA. Varios dta frames diferentes podem ocorrer, dependendo da rede.
+
+### Power mangement
+
+Quando a estação ou o AP levantam o bit de power management, o que permite é quer ao nó, que ao AP, fazer uma gestão mais eficiente da transferência de dados entre ambos. "I'm going to sleep" até ao próximo beacon interval. Do lado para a estação, o AP dá a indicação á estação se essa estação tem ou não dados para receber. Se tiver mantém-se acordada, senão "volta a dormir".
